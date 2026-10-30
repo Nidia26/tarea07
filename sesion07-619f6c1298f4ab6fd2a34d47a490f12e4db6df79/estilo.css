@@ -1,0 +1,253 @@
+:root{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --color1:#334960;
+    --color2:#F2F2F2;
+    --color3:#44A1F2;
+    --color4:#99A4B0;
+    font-family: "Oxygen", sans-serif;
+    background-color: var(--color2);
+}
+#contenedor{
+    width: 100%;
+    height: 280vh;  
+}
+header{     
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:20px;
+    /*posicionamiento fijo*/
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;  
+}
+header a img{
+    height: 60px;   
+}
+nav{
+    padding-right: 40px;
+    font-size: 0.8em;
+}
+#menu,#redes{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;        
+}
+#menu li a, #redes li a{
+    text-decoration: none;
+    padding:10px;
+    color:var(--color4)
+}
+#menu li a:hover,#redes li a:hover{
+    color:var(--color2);
+}
+h5{
+    color:var(--color1);
+    margin-top: 120px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start; 
+       
+}
+section{
+    width:60%;    
+    text-align: center; 
+}
+section article img{
+    max-width: 90%;
+}
+section article p{
+    max-width: 90%;    
+    margin: auto;
+    padding: 5px;
+    font-size: 0.8em;
+    font-style: italic;   
+}
+section article h2{
+    /*posicionamiento adhesivo*/
+    position:sticky;
+    top:100px;
+    background-color: var(--color2);
+    z-index: 20;
+    padding: 10px;
+}
+aside{
+    width: 30%;    
+    text-align: center;   
+}
+aside img{
+    max-width: 70% ;
+}
+footer{  
+    background-color: var(--color1);
+    color:var(--color2)
+}
+footer h4{
+    padding-top: 12px;
+    text-align: center;    
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+nav p{
+    text-align: center;
+}
+/*Videos responsivos*/
+.video-responsive{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    border:1px solid var(--color3);
+    
+}
+.video-responsive iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+/*Video de fondo*/
+#video{
+    min-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height: auto;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/*texto de fondo*/
+#contenido{
+    /*main ya tiene flex box centrado*/
+   width:100%;      
+   z-index: 10;
+}
+main #texto{
+    width:50%;    
+    padding:10px;  
+    z-index: 50;
+    color:var(--color2);
+    text-align:justify;
+}
+
+
+/* PAGINA CONTACTOS */
+
+#contactos{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: auto;
+    text-align: left;
+}
+
+#tabla{
+    width: 30%;
+    padding: 8px;
+}
+
+#tabla h3{
+    color:red;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color4);
+    padding-bottom: 8px;
+}
+
+#tabla table{
+    width: 100%;
+    font-size: 0.7em;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+#tabla th{
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    width: 30%;
+}
+
+#tabla td{
+    text-align: left;
+    font-weight: bold;
+}
+
+#formulario{
+    width: 30%;
+    padding: 8px;
+}
+
+#formulario h3{
+    color: red;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color4);
+    padding-bottom: 8px;
+}
+
+#formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario label{
+    font-size: 0.7em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#formulario input,
+#formulario textarea{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid var(--color4);
+    font-family: "Oxygen", sans-serif;
+    font-size: 0.7em;
+}
+
+#formulario textarea{
+    height: 90px;
+    resize: vertical;
+}
+
+#formulario input[type="submit"]{
+    background-color: var(--color1);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#mapa{
+    width: 36%;
+    padding: 8px;
+}
+
+#mapa iframe{
+    width: 100%;
+    height: 350px;
+    display: block;
+    border: none;
+}
